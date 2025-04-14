@@ -92,7 +92,6 @@ class autofs (
     group   => 'root',
     mode    => '0644',
     content => template('autofs/autofs_linux.erb'),
-    require => Package['autofs'],
   }
 
   create_resources('autofs::map', $maps)
